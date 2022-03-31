@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="370dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="15dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl"
+    android:background="#00FFFFFF"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="#00FFFFFF"
+        android:id="@+id/ly_first"
+        android:visibility="visible"
+        android:layout_marginStart="10dp"
+        android:layout_width="200dp"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_first"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+
+            android:src="@drawable/amazing_background"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="مشاهده همه >"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_first" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/rv_item_background"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_product"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/amazing_background"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+
+            android:layout_marginEnd="16dp"
+            android:text="سیاسفاسفاقفاقفساقساقس"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_product" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_discount"
+            android:textDirection="ltr"
+            android:paddingEnd="1dp"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:paddingStart="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/tv_discount_background"
+            android:layout_marginTop="80dp"
+            android:text="@string/_10"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_product_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:hint="240.000"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/iv_product"
+            app:layout_constraintTop_toTopOf="@id/tv_discount"
+
+           />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_first_price"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:hint="@string/_250_000"
+                app:layout_constraintEnd_toEndOf="@id/tv_price"
+                app:layout_constraintTop_toBottomOf="@id/tv_price"
+                app:layout_constraintStart_toStartOf="@id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_toman"
+            android:layout_marginStart="5dp"
+            android:text="تومان"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_price"
+            app:layout_constraintTop_toTopOf="@id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            />
+
+            <Chronometer
+                android:id="@+id/timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/gray"
+                />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+android:visibility="gone"
+        android:id="@+id/ly_end"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/rv_amazing_background"
+
+        >
+
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+
+            android:id="@+id/imageFilterButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@color/white"
+
+            android:src="@drawable/backbutton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="مشاهده همه"
+            android:textColor="@color/black"
+            android:textDirection="rtl"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageFilterButton"
+            app:layout_constraintVertical_bias="0.14" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
